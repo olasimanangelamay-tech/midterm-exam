@@ -2,22 +2,35 @@
 
 Olasiman, Angela May N.  BSIT-3A
 
-1. What is the primary operational difference between fit fetch and git pull?
-answer:
+1. What is the primary operational difference between fit fetch and git pull? 
+answer: git fetch downloads remote changes without applying them to your code. while git pull downloads and automatically merges those changes into your curent branch.
 
-2. You have uncommitted changes in your working directory and need to temporarily switch to another branch. Which workflow prevents Git from bloking the checkoout due to file overwrites?
-answer:
+2. You have uncommitted changes in your working directory and need to temporarily switch to another branch. 
+Which workflow prevents Git from bloking the checkoout due to file overwrites? 
+answer: git stash
 
-3.When executing a git merge--no-ff command, what specific behavior is enforced by Git?
-answer:
+3.When executing a git merge--no-ff command, what specific behavior is enforced by Git? 
+answer: it forces git to create a dedicated merge commit, even if it could merge automatically without  one, keeping feature history visible.
 
-4. What happens when you check outt a specific commit hash directly (e.g., git checkout a1b2c3d) instead of a branch names?
-answer:
+4. What happens when you check outt a specific commit hash directly (e.g., git checkout a1b2c3d) instead of a branch names? 
+answer: puts git into a detached HEAD state where changes arent attached to a branch.
 
-5. you need to apply a specific bug-fix commit from a development branch onto a stable release branch without merging the entire branch history. which command should you use?
-answer:
+5. you need to apply a specific bug-fix commit from a development branch onto a stable release branch without merging 
+the entire branch history. which command should you use? 
+answer: git cherry-pick <commit-hash>
 
-6. After performing a destructive  git reset --hard operation, you realize  you lost recent commits that were not on any branch. which utility can retrieve these dangling commits?
-answer:
+6. After performing a destructive git reset --hard operation, you realize  you lost recent commits that were not on any branch. 
+ which utility can retrieve these dangling commits? 
+ answer: git reset --hard: git reflog 
 
-7. You want to remived untracked files and Directories  to your working trees, including ignore 
+7. You want to remived untracked files and Directories  to your working trees, including ignored file listed in .gittignore. Which command flag combination achieves this?
+answer: git clean -fdx
+
+8. You need to undo a public commit that has already been pushed to a shared remote repository without altering the existing commit history or distripting collaborators. Which command is appropriate?
+answer:git revert <commit-hash>
+
+9. You want to identify the specific commit that introduced a regression bug in a codebqase with hundreds of historical commits. Which utility automates this binary search process?
+answer:git bisect
+
+10. what is the function of the --amend flag when used with git commit?
+answer: It modifies the last commit by adding new staged changes or changing the commit message
